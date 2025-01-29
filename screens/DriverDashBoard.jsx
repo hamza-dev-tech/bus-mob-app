@@ -6,6 +6,7 @@ import MapView, { Marker, Polyline } from "react-native-maps";
 import { database, db3 } from "../Firebase";
 import { push, ref } from "firebase/database";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
+import { PROVIDER_GOOGLE } from "react-native-maps";
 
 export default function DriverDashBoard({ navigation , route}) {
   const { driver_email } = route.params;
@@ -136,6 +137,7 @@ export default function DriverDashBoard({ navigation , route}) {
         {location && (
           
           <MapView
+          provider={PROVIDER_GOOGLE}
           showsMyLocationButton={true}
           showsUserLocation={true}
             style={styles.map}

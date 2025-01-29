@@ -1,9 +1,10 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
-import MapView, { Marker, AnimatedRegion, Polyline } from "react-native-maps";
+import MapView, { Marker, AnimatedRegion, Polyline, PROVIDER_GOOGLE } from "react-native-maps";
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db3 } from './Firebase';
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
+import { PROVIDER_DEFAULT } from 'react-native-maps';
 
 export default function LiveTrack({ route }) {
   const { email } = route.params;
@@ -65,6 +66,7 @@ export default function LiveTrack({ route }) {
     <View style={styles.container}>
       {initialRegion && (
         <MapView
+        provider={PROVIDER_GOOGLE}
           style={styles.map}
           initialRegion={initialRegion}
         >

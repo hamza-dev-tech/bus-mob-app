@@ -60,10 +60,10 @@ const UserDashBoard = ({ navigation, route }) => {
           style={{
             flex: 0.1,
             backgroundColor: "#2C2B3C",
-            height: 40,
+            height: 20,
             alignItems: "center",
             justifyContent: "center",
-            marginTop: 20,
+            marginTop: 10,
           }}
         >
           <TypingAnimation
@@ -74,9 +74,8 @@ const UserDashBoard = ({ navigation, route }) => {
       )}
       <View
         style={{
-          flex: 0.6,
+          flex: 0.4,
           gap: 10,
-          marginTop: 20,
           width: "93%",
           marginLeft: "auto",
           marginRight: "auto",

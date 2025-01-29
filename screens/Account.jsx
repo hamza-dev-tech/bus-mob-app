@@ -63,7 +63,7 @@ export default function Account({ route, navigation }) {
   }, []);
 
   return (
-    <ScrollView scrollEnabled={true}>
+    <ScrollView scrollEnabled={false}>
       <Stack fill center spacing={4} style={styles.container}>
         <View
           style={{
@@ -259,7 +259,7 @@ export default function Account({ route, navigation }) {
         {/*  */}
         <View style={styles.btnsignup}>
           <Button
-            style={{ backgroundColor: "#2C2B3C" }}
+            style={{ backgroundColor: "#2C2B3C", alignSelf:'center' }}
             tintColor="#B76D68"
             titleStyle="bold"
             title="Log Out"
@@ -273,7 +273,7 @@ export default function Account({ route, navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    
   },
   btn: {
     width: 90 + "%",
